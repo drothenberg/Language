@@ -1322,7 +1322,9 @@
         <xsd:simpleContent>
             <xsd:restriction base="oval-def:EntitySimpleBaseType">
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:string"/>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[0-9]+([^0-9][0-9]+)*"/>
+                    </xsd:restriction>
                 </xsd:simpleType>
                 <xsd:attribute name="datatype" type="oval:SimpleDatatypeEnumeration" use="required" fixed="version"/>                
             </xsd:restriction>
@@ -1525,7 +1527,9 @@
         <xsd:simpleContent>
             <xsd:restriction base="oval-def:EntityStateSimpleBaseType">
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:string"/>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[0-9]+([^0-9][0-9]+)*"/>
+                    </xsd:restriction>
                 </xsd:simpleType>
                 <xsd:attribute name="datatype" type="oval:SimpleDatatypeEnumeration" use="required" fixed="version"/>                
             </xsd:restriction>
